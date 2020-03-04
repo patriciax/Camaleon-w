@@ -30,8 +30,13 @@
     font-style: normal;
 }
 
+*{
+    outline: transparent;
+}
 
-
+:focus{
+    outline: transparent;
+}
 body{
 	width: 100%;
 	height: 100vh;
@@ -41,7 +46,8 @@ body{
 }
 .navbar{
 	position: absolute;
-	right: 0;
+    right: 0;
+    z-index: 99999;
 }
 
 .nav-item{
@@ -74,7 +80,7 @@ body{
     list-style: none;
     text-align: center;
     justify-content: center;
-    left: 54px;
+    left: 0;
 }
 
 .slider-banner .slick-dots li button:before{
@@ -161,12 +167,14 @@ body{
 }
 
 .btn-outline{
-	background: transparent;
+    background: transparent;
     border: 2px solid white;
     border-radius: 15px;
-    padding: 3px 8px;
+    padding: 0px 15px;
     color: white;
     font-size: 1.2rem;
+    line-height: 1.1;
+    font-weight: 600;
 }
 
 .btn-outline:hover{
@@ -186,12 +194,13 @@ body{
 
 .pieza-banner img{
 	height: 100%;
-	width: 60%;
+	width: 100%;
 	object-fit: contain;
 }
 
 .container-agencia{
     background: linear-gradient(90deg, rgba(197, 6, 128, 0.93) 0%, rgba(102, 45, 145, 0.78) 50%, rgba(36,127,169,1) 100%);
+    overflow: hidden;
 }
 
 .agencia-title{
@@ -218,11 +227,12 @@ body{
     margin: 0 auto;
 }
 .agencia-title .subtitle-general p{
-    width: 80%;
+    width: 90%;
 }
 .agencia-title .boton-general{
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
+    margin-left: 50px;
 }
 
 .subcontent{
@@ -233,14 +243,20 @@ body{
 }
 .subcontent-title h3{
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2rem;
+    font-family: futura;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0;
 }
 .subcontent-text{
     padding: 7px;
 }
 
 .subcontent-text p{
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    letter-spacing: 1.1px;
+    line-height: 1.1;
 }
 
 .logo-header{
@@ -879,9 +895,53 @@ input, textarea{
 .pieza-banner{
     opacity: 0;
     transition: .5s;
+    width: 400px;
 }
 .active {
   opacity: 1;
   transition: .5s;
   font-weight: 800;
+}
+
+.center-pieza{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* modal styles */
+.modal-dialog {
+    max-width: 100%;
+    margin: 1.75rem auto;
+    margin: 0;
+}
+
+
+.modal-content {
+    height: 100vh;
+    border-radius: 0;
+    background-clip: initial;
+}
+
+.subtitle-general--white p{
+    color: #fff;
+    font-weight: bold;
+}
+.btn-outline.btn-bg {
+    background: #ffffffcc;
+    color: #b52d93;
+    border: 2px solid #f2cfe6;
+    padding-top: 3px;
+}
+.btn-outline.btn-bg:hover {
+    background: transparent;
+    color: #fff;    
+}
+
+.modal-content--agencia {
+    background: linear-gradient(90deg, rgba(197, 6, 128, 0.93) 0%, rgba(102, 45, 145, 0.78) 50%, rgba(36,127,169,1) 100%);
+}
+.close {
+
+    opacity: 1;
 }

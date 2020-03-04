@@ -66,3 +66,14 @@ $('.slider-banner').on('afterChange', function(event, slick, direction){
 setTimeout(() => {
   $('.pieza-banner ').addClass("active ")
 }, 500)
+
+
+$(function(){
+	$('[role=dialog]')
+	    .on('show.bs.modal', function(e) {
+		    $(this)
+		        .find('[role=document]')
+		            .removeClass()
+		            .addClass('modal-dialog ' + $(e.relatedTarget).data('ui-class'))
+	})
+})
