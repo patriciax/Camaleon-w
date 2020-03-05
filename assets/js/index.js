@@ -6,6 +6,7 @@ slider
     dots: true,
     infinite: false,
     fade: true,
+    arrows:false,
     cssEase: "linear",
   });
 

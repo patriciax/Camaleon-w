@@ -69,9 +69,15 @@ body{
 	height: 100vh;
 }
 
+.height-content{
+    margin-top: 110px;
+    height: 400px;
+    overflow: hidden;
+}
+
 .slider-banner .slick-dots {
     position: absolute;
-    bottom: 20%;
+    bottom: 7%;
 
     display: flex ;
     width: 50%;
@@ -954,10 +960,26 @@ input, textarea{
 }
 
 .slider-services .slick-dots li button:before {
-    width: 110px!important;
-    height: 33px!important;
+    width: 100px!important;
+    height: 30px!important;
     background: transparent!important;
 }
+.slider-services .slick-dots li.slick-active button:before {
+    color: transparent;
+}
+.servicios-redirec a:hover  {
+    color: #ffffff;
+
+    font-weight: 900;
+}
+
+
+.slick-dots li.slick-active:nth-child(2) button:before {
+    color: #c50680;
+}
+
+
+
 .slider-services  .slick-dots {
   
     left: -43%!important;
@@ -972,7 +994,7 @@ color: transparent;
 }
 
 .banner-content  .title-general {
-    margin-top: 150px;
+    margin-top: 30px;
 }
 .slider-services  .slick-prev, .slick-next {
  
@@ -1005,10 +1027,38 @@ color: transparent;
     border-radius: 50%;
     border: 2px solid #fff;
 }
-
+.slick-next:nth-child(1) button {
+    background: #be0981!important;
+    border: 2px solid #be0981;
+    color: red;
+}
 .slick-prev:before, .slick-next:before {
     font-family: 'FontAwesome';
     font-size: 36px;
     opacity: 1;
 }
 
+/* .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+    color: transparent;
+    outline: none;
+    background: #c60580;
+    border: 1px solid #c60580;
+}
+ */
+
+
+ .servicio-web:nth-child(1) .btn-outline.btn-bg {
+    
+    color: #3a6fa7;
+   
+}
+.servicio-web:nth-child(2) .btn-outline.btn-bg {
+    
+    color: red;
+   
+}
+.servicio-commerce .btn-outline.btn-bg {
+    
+    color: #ffc500;
+   
+}
